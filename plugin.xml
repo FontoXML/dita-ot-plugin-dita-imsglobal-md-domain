@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.fontoxml.dita.imsglobal.md.domain">
+	<feature extension="dita.specialization.catalog.relative" file="catalog.xml"/>
+	<require plugin="org.imsglobal.md" />
+</plugin>
