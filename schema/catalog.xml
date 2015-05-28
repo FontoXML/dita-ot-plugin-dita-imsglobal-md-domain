@@ -1,3 +1,11 @@
 <?xml version="1.0" ?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    
+    
+    <system systemId="imsmdDomainMod.xsd" uri="imsmdDomainMod.xsd" />
+    <system systemId="urn:imsglobal:names:dita:xsd:imsmdDomainMod.xsd" uri="imsmdDomainMod.xsd" />
+    <uri name="imsmdDomainMod.xsd" uri="imsmdDomainMod.xsd" />
+    <uri name="urn:imsglobal:names:dita:xsd:imsmdDomainMod.xsd" uri="imsmdDomainMod.xsd" />
+    
+    
 </catalog>

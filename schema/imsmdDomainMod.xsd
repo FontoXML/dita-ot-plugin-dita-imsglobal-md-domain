@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--                                                             -->
+<!--============================================================= -->
+<!--MODULE:    DITA MathML Domain - RNG                          -->
+<!--VERSION:   1.3                                                -->
+<!--DATE:      May 2013                                          -->
+<!--============================================================= -->
+<!--============================================================= -->
+<!--SYSTEM:     Darwin Information Typing Architecture (DITA)     -->
+<!--PURPOSE:    Provides elements for including MathML Markup    -->
+<!--           in DITA documents.                                -->
+<!--ORIGINAL CREATION DATE:                                      -->
+<!--May 2013                                                     -->
+<!--(C) Copyright OASIS Open 2013                                -->
+<!--All Rights Reserved.                                          -->
+<!--=============================================================    -->
+<!--                                                             -->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   
+   <xs:import schemaLocation="urn:imsglobal:md:xsd:imsmd_v1p2p4.xsd"
+      namespace="http://www.imsglobal.org/xsd/imsmd_v1p2"/>
+   
+   <xs:annotation>
+      <xs:appinfo>
+         <dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(topic imsmd-d)</dita:domainsModule>
+      </xs:appinfo>
+   </xs:annotation>
+   
+   
+
+   <xs:group name="lom-d-foreign">
+      <xs:choice>
+         <xs:element ref="imsglobalmd"/>
+      </xs:choice>
+   </xs:group>
+   
+   
+   <xs:element name="imsglobalmd">
+      <xs:annotation>
+         <xs:documentation>
+            
+         </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="imsglobalmd.class">
+               <xs:attribute ref="class" default="+ topic/foreign imdmd-d/imsglobalmd "/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="imsglobalmd.class">
+      <xs:sequence>
+         <xs:group ref="imsglobalmd.content"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="imsglobalmd.attributes"/>
+   </xs:complexType>
+   <xs:group name="imsglobalmd.content">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element xmlns:lom="http://www.imsglobal.org/xsd/imsmd_v1p2" ref="lom:lom"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="imsglobalmd.attributes">
+      <xs:attributeGroup ref="univ-atts"/>
+      <xs:attribute name="outputclass" type="xs:string"/>
+      <xs:attributeGroup ref="global-atts"/>
+   </xs:attributeGroup>
+   
+</xs:schema>
+
