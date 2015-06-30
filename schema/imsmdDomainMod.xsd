@@ -18,8 +18,9 @@
 <xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
            xmlns:xs="http://www.w3.org/2001/XMLSchema">
    
-   <xs:import schemaLocation="urn:imsglobal:md:xsd:imsmd_v1p2p4.xsd"
-      namespace="http://www.imsglobal.org/xsd/imsmd_v1p2"/>
+   <!-- NOTE BW: Currently the lom elements are not validated since FontoXML does not support it -->
+   <!--xs:import schemaLocation="urn:imsglobal:md:xsd:imsmd_v1p2p4.xsd"
+      namespace="http://www.imsglobal.org/xsd/imsmd_v1p2"/-->
    
    <xs:annotation>
       <xs:appinfo>
@@ -59,7 +60,9 @@
    <xs:group name="imsglobalmd.content">
       <xs:sequence>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element xmlns:lom="http://www.imsglobal.org/xsd/imsmd_v1p2" ref="lom:lom"/>
+            <!-- NOTE BW: Currently the lom elements are not validated since FontoXML does not support it -->
+            <!--xs:element xmlns:lom="http://www.imsglobal.org/xsd/imsmd_v1p2" ref="lom:lom"/-->
+            <xs:any namespace="http://www.imsglobal.org/xsd/imsmd_v1p2" processContents="skip" />
          </xs:choice>
       </xs:sequence>
    </xs:group>
